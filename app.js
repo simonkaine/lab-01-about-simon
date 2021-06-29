@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
 
-import { isYes } from "./utils.js";
+import { countsAsAYes } from "./utils.js";
 
 // initialize state
 
@@ -31,17 +31,33 @@ quizButton.addEventListener('click', ()=> {
   console.log(confirmed);
 
   if (confirmed) {
-    const name = prompt("Whats is you name?");
-    const ans1 = prompt("Am i 5 foot ten inches?");
-    const ans2 = prompt("Am i 5 foot ten inches?");
-    const ans3 = prompt("Am i 5 foot ten inches?");
+    const name = prompt("What is your name?");
+    const ans1 = prompt("Am i five foot nine inches tall?");
+    const ans2 = prompt("Do I hate watching movies?");
+    const ans3 = prompt("Is it true, I really can't whistle.");
+    const ans4 = prompt("Do I like to ride a bike?");
+    const ans5 = prompt("Am I a fan of welding?");
+    const ans6 = prompt("Can I wood craft?");
+    const ans7 = prompt("Do I hate coding?");
+    const ans8 = prompt("Is my favorite food is tacos?");
+    const ans9 = prompt("Do I have boy dog named Kota?");
+    const ans10 = prompt("Do I live in a town named Milwaukie?");
     console.log(name, ans1, ans2, ans3);
     let score = 0
-    if (isYes(ans1)) score++;
-    if (isYes(ans2)) score++;
-    if (isYes(ans3)) score++;
+    if (!(countsAsAYes(ans1))) score++;
+    if (!(countsAsAYes(ans2))) score++;
+    if (countsAsAYes(ans3)) score++;
+    if (countsAsAYes(ans4)) score++;
+    if (countsAsAYes(ans5)) score++;
+    if (countsAsAYes(ans6)) score++;
+    if (!(countsAsAYes(ans7))) score++;
+    if (!(countsAsAYes(ans8))) score++;
+    if (!(countsAsAYes(ans9))) score++;
+    if (countsAsAYes(ans10)) score++;
+
     console.log(score);
-    results.innerText = `${name} you got ${score} right!`
+    alert("Finished Quiz! Check below for your score!");
+    results.innerText = `${name} you got ${score} out of 10 correct!`
   }
   else {
     console.log("user cancelled");
