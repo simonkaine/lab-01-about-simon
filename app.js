@@ -24,6 +24,19 @@ const quizButton = document.getElementById('click-me');
 const results = document.getElementById('results');
 
 quizButton.addEventListener('click', ()=> {
-  console.log("Am i being clicked?");
+  const confirmed = confirm('would you like to start the quiz?');
+
+  console.log(confirmed);
+
+  if (confirmed) {
+    const name = prompt("Whats is you name?");
+    const ans1 = prompt("Am i 5 foot ten inches?");
+    const ans2 = prompt("Am i 5 foot ten inches?");
+    const ans3 = prompt("Am i 5 foot ten inches?");
+    console.log(name, ans1, ans2, ans3);
+  }
+  else {
+    console.log("user cancelled");
+  }
 })
 
