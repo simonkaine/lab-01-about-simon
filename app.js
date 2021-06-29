@@ -1,5 +1,7 @@
 // import functions and grab DOM elements
 
+import { isYes } from "./utils.js";
+
 // initialize state
 
 // set event listeners 
@@ -34,6 +36,12 @@ quizButton.addEventListener('click', ()=> {
     const ans2 = prompt("Am i 5 foot ten inches?");
     const ans3 = prompt("Am i 5 foot ten inches?");
     console.log(name, ans1, ans2, ans3);
+    let score = 0
+    if (isYes(ans1)) score++;
+    if (isYes(ans2)) score++;
+    if (isYes(ans3)) score++;
+    console.log(score);
+    results.innerText = `${name} you got ${score} right!`
   }
   else {
     console.log("user cancelled");
