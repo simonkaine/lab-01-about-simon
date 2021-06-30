@@ -40,7 +40,7 @@ quizButton.addEventListener('click', ()=> {
     const ans3 = prompt("Is it true, I really can't whistle.");
     const ans4 = prompt('Do I like to ride a bike?');
     const ans5 = prompt('Am I a fan of welding?');
-    const ans6 = prompt('Can I wood craft?');
+    const ans6 = prompt('Is wood crafting my #1 favorite activity?');
     const ans7 = prompt('Do I hate coding?');
     const ans8 = prompt('Is my favorite food is tacos?');
     const ans9 = prompt('Do I have boy dog named Kota?');
@@ -76,5 +76,5 @@ quizButton.addEventListener('click', ()=> {
   else {
     console.log('user cancelled');
   }
-})
+});
 
