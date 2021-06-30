@@ -27,24 +27,24 @@ const results = document.getElementById('results');
 const message = document.getElementById('outcome-message');
 
 quizButton.addEventListener('click', ()=> {
-  
+
   const confirmed = confirm('would you like to start the quiz?');
 
   console.log(confirmed);
 
   if (confirmed) {
 
-    const name = prompt("What is your name?");
-    const ans1 = prompt("Am i five foot nine inches tall?");
-    const ans2 = prompt("Do I hate watching movies?");
+    const name = prompt('What is your name?');
+    const ans1 = prompt('Am i five foot nine inches tall?');
+    const ans2 = prompt('Do I hate watching movies?');
     const ans3 = prompt("Is it true, I really can't whistle.");
-    const ans4 = prompt("Do I like to ride a bike?");
-    const ans5 = prompt("Am I a fan of welding?");
-    const ans6 = prompt("Can I wood craft?");
-    const ans7 = prompt("Do I hate coding?");
-    const ans8 = prompt("Is my favorite food is tacos?");
-    const ans9 = prompt("Do I have boy dog named Kota?");
-    const ans10 = prompt("Do I live in a town named Milwaukie?");
+    const ans4 = prompt('Do I like to ride a bike?');
+    const ans5 = prompt('Am I a fan of welding?');
+    const ans6 = prompt('Can I wood craft?');
+    const ans7 = prompt('Do I hate coding?');
+    const ans8 = prompt('Is my favorite food is tacos?');
+    const ans9 = prompt('Do I have boy dog named Kota?');
+    const ans10 = prompt('Do I live in a town named Milwaukie?');
     console.log(name, ans1, ans2, ans3);
 
     let score = 0
@@ -61,8 +61,10 @@ quizButton.addEventListener('click', ()=> {
     if (countsAsAYes(ans10)) score++;
 
     console.log(score);
-    alert("Finished Quiz! Check below for your score!");
-    results.innerText = `${name} you got ${score} out of 10 correct!`
+    alert('Finished Quiz! Check below for your score!');
+
+    const percentage = score / 10 * 100;
+    results.innerText = `${name} you got ${score} out of 10 correct! That's ${percentage}%`;
     if (score <= 9) {
       results.style.color = 'red';
       message.innerText = "Unfortunatly you didn't get 100% correct. I'm sad now :,(";
@@ -72,7 +74,7 @@ quizButton.addEventListener('click', ()=> {
     };
   }
   else {
-    console.log("user cancelled");
+    console.log('user cancelled');
   }
 })
 

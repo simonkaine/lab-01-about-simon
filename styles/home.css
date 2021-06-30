@@ -1,4 +1,8 @@
 /* add home page styles here */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
 
 img {
     width: 20%;
@@ -7,12 +11,18 @@ img {
 
 h1 {
     font-size: 2em;
+    font-family: 'Big Shoulders Display', cursive;
 }
 
 h2 {
     font-size: 1.5em;
+    font-family: 'Big Shoulders Display', cursive;
 }
 
 h3 {
     font-size: 1.3em;
+    font-family: 'Big Shoulders Display', cursive;
 }
+
+
+
