@@ -1,11 +1,23 @@
-## Making a plan
-1) Make a drawing of your app. Simple "wireframes"
-2) Once you have a drawing, name the HTML elements you'll need to realize your vision
-3) For each HTML element ask: Why do I need this?
-4) Once we know _why_ we need each element, think about how to implement the "Why" as a "How"
-5) Is there some state we need to initialize?
-6) Find all the 'events' (user clicks, form submit, etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change?
-7) Think about how to validate each of your steps
-8) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
-9) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.
+# Outcome plan and Validation steps for About Me site.
+
+* Plan
+
+1. I want to make a site with detailed info about me.
+1. There will be a quiz available for a user to take. 
+1. I will have the quiz results outputted to the broswer.
+1. ACP often and after every good chunk of code has been established.
+
+* Steps
+
+1. First I need to add wireframe and structure to the HTML.
+1. Then I will build out the JavaScript to read html elements.
+1. Console.log between code block snippets to make sure the JS runs correctly.
+1. After that I created a utils.js file to export my function.
+1. TDD my function to make sure it passes and fails.
+1. Made sure prompt questions matched the output from JS conditional statements.
+1. Added styled results answer depending on the answer.
+1. Added two Google fonts to site.
+1. Added percentage calculation to results answer.
+1. Styled page accordingly, making sure things look clean and color palette established.
+1. Checked over code for syntax errors, bad indentation. 
 
