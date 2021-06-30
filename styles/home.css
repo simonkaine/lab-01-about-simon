@@ -1,7 +1,22 @@
 /* add home page styles here */
+/* @color1: #69D2E7;
+@color2: #A7DBD8;
+@color3: #E0E4CC;
+@color4: #F38630;
+@color5: #FA6900;
+@color6: #010819; */
+
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
+}
+
+header {
+    background-color:#A7DBD8;
+}
+
+main {
+    background-color: #E0E4CC;
 }
 
 img {
@@ -23,6 +38,31 @@ h3 {
     font-size: 1.3em;
     font-family: 'Big Shoulders Display', cursive;
 }
+
+.bullet-list {
+    border: solid #FA6900;
+}
+
+.numbered-list {
+    border: solid #69D2E7;
+}
+
+.quiz-box {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+button {
+    font-size: 1.2em;
+    margin-top: 20px;
+    border-radius: 2px;
+    box-shadow: 3px 3px 5px;
+}
+
+img {
+    margin: 15px 0 15px 0;
+}
+
 
 
 

@@ -35,7 +35,7 @@ quizButton.addEventListener('click', ()=> {
   if (confirmed) {
 
     const name = prompt('What is your name?');
-    const ans1 = prompt('Am i five foot nine inches tall?');
+    const ans1 = prompt('Am I five foot nine inches tall?');
     const ans2 = prompt('Do I hate watching movies?');
     const ans3 = prompt("Is it true, I really can't whistle.");
     const ans4 = prompt('Do I like to ride a bike?');
@@ -64,7 +64,7 @@ quizButton.addEventListener('click', ()=> {
     alert('Finished Quiz! Check below for your score!');
 
     const percentage = score / 10 * 100;
-    results.innerText = `${name} you got ${score} out of 10 correct! That's ${percentage}%`;
+    results.innerText = `${name}, you got ${score} out of 10 correct! That's ${percentage}%`;
     if (score <= 9) {
       results.style.color = 'red';
       message.innerText = "Unfortunatly you didn't get 100% correct. I'm sad now :,(";
