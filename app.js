@@ -24,13 +24,16 @@ import { countsAsAYes } from "./utils.js";
 
 const quizButton = document.getElementById('click-me');
 const results = document.getElementById('results');
+const message = document.getElementById('outcome-message');
 
 quizButton.addEventListener('click', ()=> {
+  
   const confirmed = confirm('would you like to start the quiz?');
 
   console.log(confirmed);
 
   if (confirmed) {
+
     const name = prompt("What is your name?");
     const ans1 = prompt("Am i five foot nine inches tall?");
     const ans2 = prompt("Do I hate watching movies?");
@@ -43,7 +46,9 @@ quizButton.addEventListener('click', ()=> {
     const ans9 = prompt("Do I have boy dog named Kota?");
     const ans10 = prompt("Do I live in a town named Milwaukie?");
     console.log(name, ans1, ans2, ans3);
+
     let score = 0
+
     if (!(countsAsAYes(ans1))) score++;
     if (!(countsAsAYes(ans2))) score++;
     if (countsAsAYes(ans3)) score++;
@@ -58,6 +63,13 @@ quizButton.addEventListener('click', ()=> {
     console.log(score);
     alert("Finished Quiz! Check below for your score!");
     results.innerText = `${name} you got ${score} out of 10 correct!`
+    if (score <= 9) {
+      results.style.color = 'red';
+      message.innerText = "Unfortunatly you didn't get 100% correct. I'm sad now :,(";
+    } else {
+      results.style.color = 'green';
+      message.innerText = 'Great job! 100% correct! You know me so well!';
+    };
   }
   else {
     console.log("user cancelled");
